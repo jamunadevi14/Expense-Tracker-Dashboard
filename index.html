@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Expense Tracker Dashboard</h2>
+    <p style="text-align: center; color: #7f8c8d;">Developer: Jamunadevi R</p>
+    
+    <div class="dashboard">
+        <div class="card">
+            <h3>Total Budget</h3>
+            <p id="total-budget">$1000.00</p>
+        </div>
+        <div class="card expense">
+            <h3>Total Expenses</h3>
+            <p id="total-expense">$0.00</p>
+        </div>
+        <div class="card balance">
+            <h3>Remaining Balance</h3>
+            <p id="balance">$1000.00</p>
+        </div>
+    </div>
+
+    <form id="expense-form">
+        <input type="text" id="expense-name" placeholder="Where did you spend? (e.g., Coffee)" required>
+        <input type="number" id="expense-amount" placeholder="Amount ($)" required>
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <h3>Transaction History</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="expense-list"></tbody>
+    </table>
+</div>
+
+<script src="frontend.js"></script>
+</body>
+</html>
